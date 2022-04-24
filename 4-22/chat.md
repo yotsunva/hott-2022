@@ -53,4 +53,4 @@ canonicity（閉項を簡約すると構成子の組み合わせで表せる）�
 いくつかのモデルにおける例を挙げる。
 - type family B→TypeをBで添え字付けられた集合族に対応させる（MLTTの）集合論的なモデルにおいては、Id_Aに対応する対象は "集合族{S_a}_{a∈A}として" refl_a∈S_a (a∈A)から自由生成される（refl_aを入れるだけで集合族になるので、自由生成しても新たな元は追加されない）。
 - type family B→TypeをBを底空間とするfibrationと対応させるモデルにおいて、Id_Aに対応する対象（path space fibration A^I→A×A）は "fibrationとして" Δ : A→A×Aから自由生成される（fibrationではpathの持ち上げ等ができるので、自由生成する際にそれを演算として使って良い）。
-- type family B→Typeを∞-groupoid Bからuniverse U（対象は∞-groupoidで高次の射も自然に定める）への関手と対応させるモデルにおいて、Id_Aに対応する対象は "関手F : A→Uとして" refl_a∈F(a)から自由生成される（関手は射を保つので、自由生成する際に送られた射を演算として使って良い）。
+- type family B→Typeを∞-groupoid Bからuniverse U（対象は∞-groupoidで高次の射も自然に定める）への関手と対応させるモデルにおいて、Id_Aに対応する対象は "関手F : A→Uとして" refl_a∈F(a)から自由生成される（関手は射を保つので、自由生成する際に送られた射を演算として使って良い）。これについてはHoTT bookの5.8で少し言及されている。
