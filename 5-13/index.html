@@ -130,43 +130,44 @@
 <a id="3253" class="Comment">-- (x , npx) : (Σ x ꞉ A , ¬ (P x)) と ap : (Π x ꞉ A , P x) から矛盾を導いている</a>
 
 <a id="3323" class="Comment">-- ¬ (Π x ꞉ A , P x) → (Σ x ꞉ A , ¬ (P x)) は一般には示せない（排中律等を公理として与えれば示せる）</a>
+<a id="3395" class="Comment">-- が、これを正当化するレベルの排中律（Type レベルの排中律）は univalence と一緒に入れると矛盾する</a>
+  <a id="3457" class="Comment">-- hProp レベルの排中律なら univalence と一緒に入れても問題ない</a>
 
+<a id="3501" class="Comment">-- 構成的な choice（余談）</a>
 
-<a id="3397" class="Comment">-- 構成的な choice（余談）</a>
+<a id="3521" class="Comment">-- 一階述語論理上のZFC集合論において、選択公理 (AC) は公理として仮定されている</a>
+<a id="3567" class="Comment">-- AC を仮定すると、一階述語論理で直観主義的なものを採用したとしても排中律 (LEM) と同等のことが言える (Diaconescu&#39;s theorem)</a>
+  <a id="3650" class="Comment">-- 命題 P を持ってくると、P ∨ ¬ P が示せるということ</a>
+  <a id="3686" class="Comment">-- 可算選択公理 (CC) や従属選択公理 (DC) から LEM と同等のことを言うことはできない</a>
+    <a id="3742" class="Comment">-- 構成主義であっても、流儀によっては CC, DC を仮定する場合がある</a>
 
-<a id="3417" class="Comment">-- 一階述語論理上のZFC集合論において、選択公理 (AC) は公理として仮定されている</a>
-<a id="3463" class="Comment">-- AC を仮定すると、一階述語論理で直観主義的なものを採用したとしても排中律 (LEM) と同等のことが言える (Diaconescu&#39;s theorem)</a>
-  <a id="3546" class="Comment">-- 命題 P を持ってくると、P ∨ ¬ P が示せるということ</a>
-  <a id="3582" class="Comment">-- 可算選択公理 (CC) や従属選択公理 (DC) から LEM と同等のことを言うことはできない</a>
-    <a id="3638" class="Comment">-- 構成主義であっても、流儀によっては CC, DC を仮定する場合がある</a>
+<a id="3782" class="Comment">-- 型理論の（計算の観点から見て）良い性質を保つためには、公理なしで（良い規則のみで）議論を行うべき</a>
+  <a id="3836" class="Comment">-- 当然 LEM, AC を仮定すると良い性質 (canonicity) が壊れる</a>
+<a id="3879" class="Comment">-- しかし、次の主張は規則のみから示すことができる</a>
 
-<a id="3678" class="Comment">-- 型理論の（計算の観点から見て）良い性質を保つためには、公理なしで（良い規則のみで）議論を行うべき</a>
-  <a id="3732" class="Comment">-- 当然 LEM, AC を仮定すると良い性質 (canonicity) が壊れる</a>
-<a id="3775" class="Comment">-- しかし、次の主張は規則のみから示すことができる</a>
+<a id="choice"></a><a id="3907" href="index.html#3907" class="Function">choice</a> <a id="3914" class="Symbol">:</a> <a id="3916" class="Symbol">∀</a> <a id="3918" class="Symbol">{</a><a id="3919" href="index.html#3919" class="Bound">ℓ</a><a id="3920" class="Symbol">}</a> <a id="3922" class="Symbol">{</a><a id="3923" href="index.html#3923" class="Bound">Λ</a> <a id="3925" class="Symbol">:</a> <a id="3927" class="PrimitiveType">Set</a> <a id="3931" href="index.html#3919" class="Bound">ℓ</a><a id="3932" class="Symbol">}</a> <a id="3934" class="Symbol">{</a><a id="3935" href="index.html#3935" class="Bound">A</a> <a id="3937" class="Symbol">:</a> <a id="3939" href="index.html#3923" class="Bound">Λ</a> <a id="3941" class="Symbol">→</a> <a id="3943" class="PrimitiveType">Set</a> <a id="3947" href="index.html#3919" class="Bound">ℓ</a><a id="3948" class="Symbol">}</a> <a id="3950" class="Symbol">{</a><a id="3951" href="index.html#3951" class="Bound">P</a> <a id="3953" class="Symbol">:</a> <a id="3955" class="Symbol">(</a><a id="3956" href="index.html#3956" class="Bound">x</a> <a id="3958" class="Symbol">:</a> <a id="3960" href="index.html#3923" class="Bound">Λ</a><a id="3961" class="Symbol">)</a> <a id="3963" class="Symbol">→</a> <a id="3965" href="index.html#3935" class="Bound">A</a> <a id="3967" href="index.html#3956" class="Bound">x</a> <a id="3969" class="Symbol">→</a> <a id="3971" class="PrimitiveType">Set</a> <a id="3975" href="index.html#3919" class="Bound">ℓ</a><a id="3976" class="Symbol">}</a> <a id="3978" class="Symbol">→</a>
+  <a id="3982" class="Symbol">(</a><a id="3983" href="index.html#2293" class="Function">Π</a> <a id="3985" href="index.html#3985" class="Bound">x</a> <a id="3987" href="index.html#2293" class="Function">꞉</a> <a id="3989" href="index.html#3923" class="Bound">Λ</a> <a id="3991" href="index.html#2293" class="Function">,</a> <a id="3993" href="index.html#2061" class="Datatype">Σ</a> <a id="3995" href="index.html#3995" class="Bound">a</a> <a id="3997" href="index.html#2061" class="Datatype">꞉</a> <a id="3999" href="index.html#3935" class="Bound">A</a> <a id="4001" href="index.html#3985" class="Bound">x</a> <a id="4003" href="index.html#2061" class="Datatype">,</a> <a id="4005" href="index.html#3951" class="Bound">P</a> <a id="4007" href="index.html#3985" class="Bound">x</a> <a id="4009" href="index.html#3995" class="Bound">a</a><a id="4010" class="Symbol">)</a> <a id="4012" class="Symbol">→</a> <a id="4014" class="Symbol">(</a><a id="4015" href="index.html#2061" class="Datatype">Σ</a> <a id="4017" href="index.html#4017" class="Bound">f</a> <a id="4019" href="index.html#2061" class="Datatype">꞉</a> <a id="4021" class="Symbol">((</a><a id="4023" href="index.html#4023" class="Bound">x</a> <a id="4025" class="Symbol">:</a> <a id="4027" href="index.html#3923" class="Bound">Λ</a><a id="4028" class="Symbol">)</a> <a id="4030" class="Symbol">→</a> <a id="4032" href="index.html#3935" class="Bound">A</a> <a id="4034" href="index.html#4023" class="Bound">x</a><a id="4035" class="Symbol">)</a> <a id="4037" href="index.html#2061" class="Datatype">,</a> <a id="4039" href="index.html#2293" class="Function">Π</a> <a id="4041" href="index.html#4041" class="Bound">x</a> <a id="4043" href="index.html#2293" class="Function">꞉</a> <a id="4045" href="index.html#3923" class="Bound">Λ</a> <a id="4047" href="index.html#2293" class="Function">,</a> <a id="4049" href="index.html#3951" class="Bound">P</a> <a id="4051" href="index.html#4041" class="Bound">x</a> <a id="4053" class="Symbol">(</a><a id="4054" href="index.html#4017" class="Bound">f</a> <a id="4056" href="index.html#4041" class="Bound">x</a><a id="4057" class="Symbol">))</a>
+<a id="4060" href="index.html#3907" class="Function">choice</a> <a id="4067" href="index.html#4067" class="Bound">axeapxa</a> <a id="4075" class="Symbol">=</a> <a id="4077" class="Symbol">(λ</a> <a id="4080" href="index.html#4080" class="Bound">x</a> <a id="4082" class="Symbol">→</a> <a id="4084" href="index.html#2599" class="Function">pr1</a> <a id="4088" class="Symbol">(</a><a id="4089" href="index.html#4067" class="Bound">axeapxa</a> <a id="4097" href="index.html#4080" class="Bound">x</a><a id="4098" class="Symbol">))</a> <a id="4101" href="index.html#2111" class="InductiveConstructor Operator">,</a> <a id="4103" class="Symbol">(λ</a> <a id="4106" href="index.html#4106" class="Bound">x</a> <a id="4108" class="Symbol">→</a> <a id="4110" href="index.html#2678" class="Function">pr2</a> <a id="4114" class="Symbol">(</a><a id="4115" href="index.html#4067" class="Bound">axeapxa</a> <a id="4123" href="index.html#4106" class="Bound">x</a><a id="4124" class="Symbol">))</a>
+<a id="4127" class="Comment">-- Λ で添え字づけられた集合族 {A_x}_{x∈Λ} があるとき、</a>
+<a id="4164" class="Comment">-- 任意の x∈Λ に対して「命題 P x a が成り立つような a∈A_λ が &quot;存在する&quot;」なら、</a>
+<a id="4217" class="Comment">-- 「任意の x∈Λ に対して命題 P x (f x) が成り立つ」ような、選択関数 f ꞉ ((x : Λ) → A x) が &quot;存在する&quot;</a>
 
-<a id="choice"></a><a id="3803" href="index.html#3803" class="Function">choice</a> <a id="3810" class="Symbol">:</a> <a id="3812" class="Symbol">∀</a> <a id="3814" class="Symbol">{</a><a id="3815" href="index.html#3815" class="Bound">ℓ</a><a id="3816" class="Symbol">}</a> <a id="3818" class="Symbol">{</a><a id="3819" href="index.html#3819" class="Bound">Λ</a> <a id="3821" class="Symbol">:</a> <a id="3823" class="PrimitiveType">Set</a> <a id="3827" href="index.html#3815" class="Bound">ℓ</a><a id="3828" class="Symbol">}</a> <a id="3830" class="Symbol">{</a><a id="3831" href="index.html#3831" class="Bound">A</a> <a id="3833" class="Symbol">:</a> <a id="3835" href="index.html#3819" class="Bound">Λ</a> <a id="3837" class="Symbol">→</a> <a id="3839" class="PrimitiveType">Set</a> <a id="3843" href="index.html#3815" class="Bound">ℓ</a><a id="3844" class="Symbol">}</a> <a id="3846" class="Symbol">{</a><a id="3847" href="index.html#3847" class="Bound">P</a> <a id="3849" class="Symbol">:</a> <a id="3851" class="Symbol">(</a><a id="3852" href="index.html#3852" class="Bound">x</a> <a id="3854" class="Symbol">:</a> <a id="3856" href="index.html#3819" class="Bound">Λ</a><a id="3857" class="Symbol">)</a> <a id="3859" class="Symbol">→</a> <a id="3861" href="index.html#3831" class="Bound">A</a> <a id="3863" href="index.html#3852" class="Bound">x</a> <a id="3865" class="Symbol">→</a> <a id="3867" class="PrimitiveType">Set</a> <a id="3871" href="index.html#3815" class="Bound">ℓ</a><a id="3872" class="Symbol">}</a> <a id="3874" class="Symbol">→</a>
-  <a id="3878" class="Symbol">(</a><a id="3879" href="index.html#2293" class="Function">Π</a> <a id="3881" href="index.html#3881" class="Bound">x</a> <a id="3883" href="index.html#2293" class="Function">꞉</a> <a id="3885" href="index.html#3819" class="Bound">Λ</a> <a id="3887" href="index.html#2293" class="Function">,</a> <a id="3889" href="index.html#2061" class="Datatype">Σ</a> <a id="3891" href="index.html#3891" class="Bound">a</a> <a id="3893" href="index.html#2061" class="Datatype">꞉</a> <a id="3895" href="index.html#3831" class="Bound">A</a> <a id="3897" href="index.html#3881" class="Bound">x</a> <a id="3899" href="index.html#2061" class="Datatype">,</a> <a id="3901" href="index.html#3847" class="Bound">P</a> <a id="3903" href="index.html#3881" class="Bound">x</a> <a id="3905" href="index.html#3891" class="Bound">a</a><a id="3906" class="Symbol">)</a> <a id="3908" class="Symbol">→</a> <a id="3910" class="Symbol">(</a><a id="3911" href="index.html#2061" class="Datatype">Σ</a> <a id="3913" href="index.html#3913" class="Bound">f</a> <a id="3915" href="index.html#2061" class="Datatype">꞉</a> <a id="3917" class="Symbol">((</a><a id="3919" href="index.html#3919" class="Bound">x</a> <a id="3921" class="Symbol">:</a> <a id="3923" href="index.html#3819" class="Bound">Λ</a><a id="3924" class="Symbol">)</a> <a id="3926" class="Symbol">→</a> <a id="3928" href="index.html#3831" class="Bound">A</a> <a id="3930" href="index.html#3919" class="Bound">x</a><a id="3931" class="Symbol">)</a> <a id="3933" href="index.html#2061" class="Datatype">,</a> <a id="3935" href="index.html#2293" class="Function">Π</a> <a id="3937" href="index.html#3937" class="Bound">x</a> <a id="3939" href="index.html#2293" class="Function">꞉</a> <a id="3941" href="index.html#3819" class="Bound">Λ</a> <a id="3943" href="index.html#2293" class="Function">,</a> <a id="3945" href="index.html#3847" class="Bound">P</a> <a id="3947" href="index.html#3937" class="Bound">x</a> <a id="3949" class="Symbol">(</a><a id="3950" href="index.html#3913" class="Bound">f</a> <a id="3952" href="index.html#3937" class="Bound">x</a><a id="3953" class="Symbol">))</a>
-<a id="3956" href="index.html#3803" class="Function">choice</a> <a id="3963" href="index.html#3963" class="Bound">axeapxa</a> <a id="3971" class="Symbol">=</a> <a id="3973" class="Symbol">(λ</a> <a id="3976" href="index.html#3976" class="Bound">x</a> <a id="3978" class="Symbol">→</a> <a id="3980" href="index.html#2599" class="Function">pr1</a> <a id="3984" class="Symbol">(</a><a id="3985" href="index.html#3963" class="Bound">axeapxa</a> <a id="3993" href="index.html#3976" class="Bound">x</a><a id="3994" class="Symbol">))</a> <a id="3997" href="index.html#2111" class="InductiveConstructor Operator">,</a> <a id="3999" class="Symbol">(λ</a> <a id="4002" href="index.html#4002" class="Bound">x</a> <a id="4004" class="Symbol">→</a> <a id="4006" href="index.html#2678" class="Function">pr2</a> <a id="4010" class="Symbol">(</a><a id="4011" href="index.html#3963" class="Bound">axeapxa</a> <a id="4019" href="index.html#4002" class="Bound">x</a><a id="4020" class="Symbol">))</a>
-<a id="4023" class="Comment">-- Λ で添え字づけられた集合族 {A_x}_{x∈Λ} があるとき、</a>
-<a id="4060" class="Comment">-- 任意の x∈Λ に対して「命題 P x a が成り立つような a∈A_λ が &quot;存在する&quot;」なら、</a>
-<a id="4113" class="Comment">-- 「任意の x∈Λ に対して命題 P x (f x) が成り立つ」ような、選択関数 f ꞉ ((x : Λ) → A x) が &quot;存在する&quot;</a>
+<a id="4291" class="Comment">-- Π, Σ が ∀, ∃ と対応していると思うなら、これは AC と同値な主張に対応する</a>
+  <a id="4340" class="Comment">-- 厳密に言えば、関数型の項と写像も対応させている</a>
+  <a id="4369" class="Comment">-- 集合論において写像はグラフ（ある種の集合）としてエンコードされているので、実はこれは少し非自明な対応のさせ方</a>
+<a id="4427" class="Comment">-- しかし、この choice は規則のみから導けて、この choice から LEM が導かれることはない</a>
 
-<a id="4187" class="Comment">-- Π, Σ が ∀, ∃ と対応していると思うなら、これは AC と同値な主張に対応する</a>
-  <a id="4236" class="Comment">-- 厳密に言えば、関数型の項と写像も対応させている</a>
-  <a id="4265" class="Comment">-- 集合論において写像はグラフ（ある種の集合）としてエンコードされているので、実はこれは少し非自明な対応のさせ方</a>
-<a id="4323" class="Comment">-- しかし、この choice は規則のみから導けて、この choice から LEM が導かれることはない</a>
+<a id="4484" class="Comment">-- 対応が崩れているように思われる原因は「Σ が ∃ と対応している」と思う部分にある</a>
+<a id="4529" class="Comment">-- Σ は集合論における ∃ よりも強い意味を持っている</a>
+  <a id="4561" class="Comment">-- 感覚的には、∃ が「性質 P を満たす対象が存在する」という情報しか持っていないのに対し、</a>
+  <a id="4612" class="Comment">-- Σ は「…という対象が、性質 P を満たす」という情報を持っている</a>
 
-<a id="4380" class="Comment">-- 対応が崩れているように思われる原因は「Σ が ∃ と対応している」と思う部分にある</a>
-<a id="4425" class="Comment">-- Σ は集合論における ∃ よりも強い意味を持っている</a>
-  <a id="4457" class="Comment">-- 感覚的には、∃ が「性質 P を満たす対象が存在する」という情報しか持っていないのに対し、</a>
-  <a id="4508" class="Comment">-- Σ は「…という対象が、性質 P を満たす」という情報を持っている</a>
-
-<a id="4546" class="Comment">-- 型理論において ∃ に対応すると思えるものはあるのだろうか</a>
-  <a id="4581" class="Comment">-- MLTT には無い（無理やりエンコードできるかもしれないけれど）</a>
-  <a id="4619" class="Comment">-- pCIC（Coq, Lean のベース）にはある</a>
-    <a id="4651" class="Comment">-- Prop という宇宙において Σ と同様に inductive に定まる命題が ∃ と対応すると思える</a>
-  <a id="4708" class="Comment">-- HoTT, cubical type theory (CTT) にはある</a>
-    <a id="4752" class="Comment">-- Σ の propositional truncation（higher inductive type の一種）が ∃ と対応すると思える</a>
-  <a id="4826" class="Comment">-- pCIC の ∃ と HoTT の ∃ には微妙な違いがある</a>
-    <a id="4864" class="Comment">-- pCIC の ∃ は ∃ に加えて一意性が言えたとしても、一般にそこから Σ を導くことはできない</a>
-    <a id="4921" class="Comment">-- HoTT の ∃ ではできる</a></pre></body></html>
+<a id="4650" class="Comment">-- 型理論において ∃ に対応すると思えるものはあるのだろうか</a>
+  <a id="4685" class="Comment">-- MLTT には無い（無理やりエンコードできるかもしれないけれど）</a>
+  <a id="4723" class="Comment">-- pCIC（Coq, Lean のベース）にはある</a>
+    <a id="4755" class="Comment">-- Prop という宇宙において Σ と同様に inductive に定まる命題が ∃ と対応すると思える</a>
+  <a id="4812" class="Comment">-- HoTT, cubical type theory (CTT) にはある</a>
+    <a id="4856" class="Comment">-- Σ の propositional truncation（higher inductive type の一種）が ∃ と対応すると思える</a>
+  <a id="4930" class="Comment">-- pCIC の ∃ と HoTT の ∃ には微妙な違いがある</a>
+    <a id="4968" class="Comment">-- pCIC の ∃ は ∃ に加えて一意性が言えたとしても、一般にそこから Σ を導くことはできない</a>
+    <a id="5025" class="Comment">-- HoTT の ∃ ではできる</a></pre></body></html>
