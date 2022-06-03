@@ -75,7 +75,7 @@
     <a id="1595" href="6-03_cubical.html#1595" class="InductiveConstructor">I0</a> <a id="1598" href="6-03_cubical.html#1598" class="InductiveConstructor">I1</a> <a id="1601" class="Symbol">:</a> <a id="1603" href="6-03_cubical.html#1568" class="Datatype">Interval</a>
     <a id="1616" href="6-03_cubical.html#1616" class="InductiveConstructor">seg</a> <a id="1620" class="Symbol">:</a> <a id="1622" href="6-03_cubical.html#1595" class="InductiveConstructor">I0</a> <a id="1625" href="Agda.Builtin.Cubical.Path.html#388" class="Function Operator">≡</a> <a id="1627" href="6-03_cubical.html#1598" class="InductiveConstructor">I1</a>
   
-  <img src="images/interval.png" width="150">
+  <img src="6-03_images/interval.png" width="150">
   
   <a id="1635" href="6-03_cubical.html#1635" class="Function">constI0</a> <a id="1643" class="Symbol">:</a> <a id="1645" href="6-03_cubical.html#1568" class="Datatype">Interval</a> <a id="1654" class="Symbol">→</a> <a id="1656" href="6-03_cubical.html#1568" class="Datatype">Interval</a>
   <a id="1667" href="6-03_cubical.html#1635" class="Function">constI0</a> <a id="1675" href="6-03_cubical.html#1675" class="Bound">x</a> <a id="1677" class="Symbol">=</a> <a id="1679" href="6-03_cubical.html#1595" class="InductiveConstructor">I0</a>
@@ -86,7 +86,7 @@
   <a id="1758" href="6-03_cubical.html#1685" class="Function">constI0~id</a> <a id="1769" class="Symbol">(</a><a id="1770" href="6-03_cubical.html#1616" class="InductiveConstructor">seg</a> <a id="1774" href="6-03_cubical.html#1774" class="Bound">i</a><a id="1775" class="Symbol">)</a> <a id="1777" class="Symbol">=</a> <a id="1779" class="Symbol">λ</a> <a id="1781" href="6-03_cubical.html#1781" class="Bound">j</a> <a id="1783" class="Symbol">→</a> <a id="1785" href="6-03_cubical.html#1616" class="InductiveConstructor">seg</a> <a id="1789" class="Symbol">(</a><a id="1790" href="6-03_cubical.html#1774" class="Bound">i</a> <a id="1792" href="Cubical.Core.Primitives.html#451" class="Primitive Operator">∧</a> <a id="1794" href="6-03_cubical.html#1781" class="Bound">j</a><a id="1795" class="Symbol">)</a>
   <a id="1799" class="Comment">-- 端点だけでなく、seg 上の点に対しても path を与える必要がある</a>
   
-  <img src="images/constI-id.png" width="150">
+  <img src="6-03_images/constI-id.png" width="150">
   
   <a id="1843" class="Comment">-- Unit, Interval は型として同値</a>
   <a id="1871" href="6-03_cubical.html#1871" class="Function">_</a> <a id="1873" class="Symbol">:</a> <a id="1875" href="6-03_cubical.html#1511" class="Datatype">Unit</a> <a id="1880" href="6-03_cubical.html#1162" class="Function Operator">≃</a> <a id="1882" href="6-03_cubical.html#1568" class="Datatype">Interval</a>
@@ -97,7 +97,7 @@
     <a id="2032" href="6-03_cubical.html#2032" class="InductiveConstructor">base</a> <a id="2037" class="Symbol">:</a> <a id="2039" href="6-03_cubical.html#1985" class="Bound">A</a> <a id="2041" class="Symbol">→</a> <a id="2043" href="6-03_cubical.html#1979" class="Datatype">Cone</a> <a id="2048" href="6-03_cubical.html#1985" class="Bound">A</a>
     <a id="2054" href="6-03_cubical.html#2054" class="InductiveConstructor">generatrix</a> <a id="2065" class="Symbol">:</a> <a id="2067" class="Symbol">(</a><a id="2068" href="6-03_cubical.html#2068" class="Bound">x</a> <a id="2070" class="Symbol">:</a> <a id="2072" href="6-03_cubical.html#1985" class="Bound">A</a><a id="2073" class="Symbol">)</a> <a id="2075" class="Symbol">→</a> <a id="2077" href="6-03_cubical.html#2014" class="InductiveConstructor">apex</a> <a id="2082" href="Agda.Builtin.Cubical.Path.html#388" class="Function Operator">≡</a> <a id="2084" href="6-03_cubical.html#2032" class="InductiveConstructor">base</a> <a id="2089" href="6-03_cubical.html#2068" class="Bound">x</a>
   
-  <img src="images/cone.png" width="150">
+  <img src="6-03_images/cone.png" width="150">
   
   <a id="2096" class="Comment">-- Interval を Cone Unit として定めることもある</a>
   <a id="2134" class="Comment">-- Cone A は id : A → A, const : A → Unit の pushout として定めることもある</a>
@@ -124,7 +124,7 @@
   <a id="2681" class="Comment">-- disc</a>
   <a id="2691" href="6-03_cubical.html#2691" class="Function">D²</a> <a id="2694" class="Symbol">=</a> <a id="2696" href="6-03_cubical.html#1979" class="Datatype">Cone</a> <a id="2701" href="6-03_cubical.html#2622" class="Datatype">S¹</a>
 
-  <img src="images/D2.png" width="150">
+  <img src="6-03_images/D2.png" width="150">
 
   <a id="2707" href="6-03_cubical.html#2707" class="Function">_</a> <a id="2709" class="Symbol">:</a> <a id="2711" href="6-03_cubical.html#1511" class="Datatype">Unit</a> <a id="2716" href="6-03_cubical.html#1162" class="Function Operator">≃</a> <a id="2718" href="6-03_cubical.html#2691" class="Function">D²</a>
   <a id="2723" class="Symbol">_</a> <a id="2725" class="Symbol">=</a> <a id="2727" href="6-03_cubical.html#2484" class="Function">Unit≃Cone</a>
@@ -140,7 +140,7 @@
   <a id="2911" href="6-03_cubical.html#2838" class="Function">t2c</a> <a id="2915" class="Symbol">(</a><a id="2916" href="6-03_cubical.html#2781" class="InductiveConstructor">l2</a> <a id="2919" href="6-03_cubical.html#2919" class="Bound">i</a><a id="2920" class="Symbol">)</a> <a id="2922" class="Symbol">=</a> <a id="2924" href="6-03_cubical.html#2643" class="InductiveConstructor">base</a> <a id="2929" href="6-03_cubical.html#182" class="InductiveConstructor Operator">,</a> <a id="2931" href="6-03_cubical.html#2657" class="InductiveConstructor">loop</a> <a id="2936" href="6-03_cubical.html#2919" class="Bound">i</a>
   <a id="2940" href="6-03_cubical.html#2838" class="Function">t2c</a> <a id="2944" class="Symbol">(</a><a id="2945" href="6-03_cubical.html#2798" class="InductiveConstructor">sq</a> <a id="2948" href="6-03_cubical.html#2948" class="Bound">i</a> <a id="2950" href="6-03_cubical.html#2950" class="Bound">j</a><a id="2951" class="Symbol">)</a> <a id="2953" class="Symbol">=</a> <a id="2955" href="6-03_cubical.html#2657" class="InductiveConstructor">loop</a> <a id="2960" href="6-03_cubical.html#2948" class="Bound">i</a> <a id="2962" href="6-03_cubical.html#182" class="InductiveConstructor Operator">,</a> <a id="2964" href="6-03_cubical.html#2657" class="InductiveConstructor">loop</a> <a id="2969" href="6-03_cubical.html#2950" class="Bound">j</a>
 
-  <img src="images/T2.png" width="150">
+  <img src="6-03_images/T2.png" width="150">
 
   <a id="2974" href="6-03_cubical.html#2974" class="Function">c2t</a> <a id="2978" class="Symbol">:</a> <a id="2980" href="6-03_cubical.html#2622" class="Datatype">S¹</a> <a id="2983" href="6-03_cubical.html#144" class="Datatype Operator">×</a> <a id="2985" href="6-03_cubical.html#2622" class="Datatype">S¹</a> <a id="2988" class="Symbol">→</a> <a id="2990" href="6-03_cubical.html#2745" class="Datatype">T²</a>
   <a id="2995" href="6-03_cubical.html#2974" class="Function">c2t</a> <a id="2999" class="Symbol">(</a><a id="3000" href="6-03_cubical.html#2643" class="InductiveConstructor">base</a> <a id="3005" href="6-03_cubical.html#182" class="InductiveConstructor Operator">,</a> <a id="3007" href="6-03_cubical.html#2643" class="InductiveConstructor">base</a><a id="3011" class="Symbol">)</a> <a id="3013" class="Symbol">=</a> <a id="3015" href="6-03_cubical.html#2766" class="InductiveConstructor">pt</a>
@@ -173,7 +173,7 @@
     <a id="3630" href="6-03_cubical.html#3630" class="InductiveConstructor">l1</a> <a id="3633" href="6-03_cubical.html#3633" class="InductiveConstructor">l2</a> <a id="3636" class="Symbol">:</a> <a id="3638" href="6-03_cubical.html#3618" class="InductiveConstructor">pt</a> <a id="3641" href="Agda.Builtin.Cubical.Path.html#388" class="Function Operator">≡</a> <a id="3643" href="6-03_cubical.html#3618" class="InductiveConstructor">pt</a>
     <a id="3650" href="6-03_cubical.html#3650" class="InductiveConstructor">sq</a> <a id="3653" class="Symbol">:</a> <a id="3655" href="Agda.Builtin.Cubical.Path.html#197" class="Postulate">PathP</a> <a id="3661" class="Symbol">(λ</a> <a id="3664" href="6-03_cubical.html#3664" class="Bound">i</a> <a id="3666" class="Symbol">→</a> <a id="3668" href="6-03_cubical.html#3630" class="InductiveConstructor">l1</a> <a id="3671" class="Symbol">(</a><a id="3672" href="Cubical.Core.Primitives.html#549" class="Primitive Operator">~</a> <a id="3674" href="6-03_cubical.html#3664" class="Bound">i</a><a id="3675" class="Symbol">)</a> <a id="3677" href="Agda.Builtin.Cubical.Path.html#388" class="Function Operator">≡</a> <a id="3679" href="6-03_cubical.html#3630" class="InductiveConstructor">l1</a> <a id="3682" href="6-03_cubical.html#3664" class="Bound">i</a><a id="3683" class="Symbol">)</a> <a id="3685" href="6-03_cubical.html#3633" class="InductiveConstructor">l2</a> <a id="3688" href="6-03_cubical.html#3633" class="InductiveConstructor">l2</a>
 
-  <img src="images/K2.png" width="150">
+  <img src="6-03_images/K2.png" width="150">
 
   <a id="3694" class="Comment">-- real projective plane</a>
   <a id="3721" class="Keyword">data</a> <a id="3726" href="6-03_cubical.html#3726" class="Datatype">RP²</a> <a id="3730" class="Symbol">:</a> <a id="3732" href="Agda.Primitive.html#326" class="Primitive">Set</a> <a id="3736" href="6-03_cubical.html#309" class="Bound">ℓ</a> <a id="3738" class="Keyword">where</a>
@@ -181,7 +181,7 @@
     <a id="3761" href="6-03_cubical.html#3761" class="InductiveConstructor">l1</a> <a id="3764" href="6-03_cubical.html#3764" class="InductiveConstructor">l2</a> <a id="3767" class="Symbol">:</a> <a id="3769" href="6-03_cubical.html#3748" class="InductiveConstructor">pt</a> <a id="3772" href="Agda.Builtin.Cubical.Path.html#388" class="Function Operator">≡</a> <a id="3774" href="6-03_cubical.html#3748" class="InductiveConstructor">pt</a>
     <a id="3781" href="6-03_cubical.html#3781" class="InductiveConstructor">sq</a> <a id="3784" class="Symbol">:</a> <a id="3786" href="Agda.Builtin.Cubical.Path.html#197" class="Postulate">PathP</a> <a id="3792" class="Symbol">(λ</a> <a id="3795" href="6-03_cubical.html#3795" class="Bound">i</a> <a id="3797" class="Symbol">→</a> <a id="3799" href="6-03_cubical.html#3761" class="InductiveConstructor">l1</a> <a id="3802" class="Symbol">(</a><a id="3803" href="Cubical.Core.Primitives.html#549" class="Primitive Operator">~</a> <a id="3805" href="6-03_cubical.html#3795" class="Bound">i</a><a id="3806" class="Symbol">)</a> <a id="3808" href="Agda.Builtin.Cubical.Path.html#388" class="Function Operator">≡</a> <a id="3810" href="6-03_cubical.html#3761" class="InductiveConstructor">l1</a> <a id="3813" href="6-03_cubical.html#3795" class="Bound">i</a><a id="3814" class="Symbol">)</a> <a id="3816" href="6-03_cubical.html#3764" class="InductiveConstructor">l2</a> <a id="3819" class="Symbol">(</a><a id="3820" href="Cubical.Foundations.Prelude.html#952" class="Function">sym</a> <a id="3824" href="6-03_cubical.html#3764" class="InductiveConstructor">l2</a><a id="3826" class="Symbol">)</a>
   
-  <img src="images/RP2.png" width="150">
+  <img src="6-03_images/RP2.png" width="150">
   
   <a id="3831" class="Comment">-- 以下のように定義されたりもする</a>
   <a id="3852" class="Comment">-- data RP² : Set ℓ where</a>
