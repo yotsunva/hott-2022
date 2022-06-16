@@ -17,7 +17,7 @@ HoTT book では用意した道具を使って示していますが、
 ここでは直接示すことにします。
 おそらく path induction を二回使うことになると思います（p に関する帰納法と、isprop から出る path に関する帰納法）。
 
-#### p に関する帰納法を先に使う方針
+### p に関する帰納法を先に使う方針
 p に関する帰納法を使うと、  
 (is : isprop A) (a b : A) (p : a = b) から p = (is a b) の項を作る問題が  
 (is : isprop A) (a : A) から refl = (is a a) の項を作る問題に帰着されます。  
@@ -40,7 +40,7 @@ Proof.
   reflexivity.
 Defined.
 ```
-#### isprop から出る path に関する帰納法を先に使う方針
+### isprop から出る path に関する帰納法を先に使う方針
 (is : isprop A) (a b : A) (p : a = b) から p = (is a b) の項を作る問題を解くために、  
 (is : isprop A) (a b c : A) (p : a = b) (q : a = c) (e : q = is a c) から p = (is a b) の項を作る問題を解くことにします。  
 後者を解けば、c := a , q := is a a , e := refl とすることで前者を解くことができます。  
