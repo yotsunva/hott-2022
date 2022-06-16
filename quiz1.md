@@ -48,7 +48,7 @@ q に関する帰納法を使うと
 (is : isprop A) (a b : A) (p : a = b) (e : refl = is a a) から p = (is a b) の項を作る問題に帰着されます。  
 さらに p に関する帰納法を使うと、  
 (is : isprop A) (a b : A) (e : refl = is a a) から refl = (is a a) の項を作る問題に帰着されます。  
-これは x を使えば解けます。
+これは e を使えば解けます。
 
 Coq では例えば以下のように書くことができます。
 （Coq では、destruct すると path induction のために必要な一般化を多少やってくれます。
