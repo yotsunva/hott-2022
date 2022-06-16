@@ -43,8 +43,8 @@ Defined.
 #### isprop から出る path に関する帰納法を先に使う方針
 (is : isprop A) (a b : A) (p : a = b) から p = (is a b) の項を作る問題を解くために、  
 (is : isprop A) (a b c : A) (p : a = b) (q : a = c) (e : q = is a c) から p = (is a b) の項を作る問題を解くことにします。  
-後者を解けば、c := a , q := is a a , e := refl とすることで前者を解くことができます。
-q に関する帰納法を使うと
+後者を解けば、c := a , q := is a a , e := refl とすることで前者を解くことができます。  
+q に関する帰納法を使うと  
 (is : isprop A) (a b : A) (p : a = b) (e : refl = is a a) から p = (is a b) の項を作る問題に帰着されます。  
 さらに p に関する帰納法を使うと、  
 (is : isprop A) (a b : A) (e : refl = is a a) から refl = (is a a) の項を作る問題に帰着されます。  
