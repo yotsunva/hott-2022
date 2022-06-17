@@ -24,8 +24,8 @@ p に関する帰納法を使うと、
 is a a が refl である場合に帰着させたいですが、帰納法を使うためには is a a のままだと一般性が足りません
 （(based) path induction を使う場合、少なくとも片方の端点を自由に動かせるようにする必要があります）。
 そこで、  
-(is : isprop A) (a c : A) (q : a = c) (x : q = is a c) から refl = (is a a) の項を作る問題を解くことにします。  
-これが解ければ、c := a , q := is a a , x := refl とすることで前の問題が解けます。  
+(is : isprop A) (a c : A) (q : a = c) (e : q = is a c) から refl = (is a a) の項を作る問題を解くことにします。  
+これが解ければ、c := a , q := is a a , e := refl とすることで前の問題が解けます。  
 q に関する帰納法を使うと、  
 (is : isprop A) (a : A) (e : refl = is a a) から refl = (is a a) の項を作る問題に帰着されます。
 これは e を使えば解けます。
