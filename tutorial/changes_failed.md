@@ -1,3 +1,5 @@
+途中で失敗したので無視してください。
+
 エラーと変更点は以下の通りです：
 - `Implicit Arguments pair [ B E ].` で `Syntax error: illegal begin of vernac.` というエラーが出る問題。
   - `Arguments pair {_ _}.` に変更。Coq の仕様が変わったんだと思います。
