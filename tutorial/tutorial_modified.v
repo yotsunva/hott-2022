@@ -1,3 +1,5 @@
+Set Asymmetric Patterns.
+Set Universe Polymorphism.
 (** "Homotopy type theory and Voevodsky's univalent foundations" Companion File *)
 
 (** By Alvaro Pelayo and Michael A. Warren.  August, 2012.*)
@@ -117,7 +119,7 @@ Print indirect_predecessor.
 (** We view dependent types as maps B -> UU and then the following inductive type "total" corresponds to the dependent sum.  From the homotopical perspective, this is the total space of the fibration.  From the category theoretic perspective, this is the infinity groupoid obtained by performing the Grothendieck construction on the map B -> UU.*)
 
 Inductive total { B : UU } ( E : B -> UU ) : UU := pair ( x : B ) ( y : E x ).
-Implicit Arguments pair [ B E ].
+Arguments pair {_ _}.
 
 Definition dirprod ( A B : UU ) : UU := total ( fun x : A => B ).
 Definition dirprodpair { A B : UU } : A -> B -> dirprod A B  := fun x y => pair x y. 
@@ -572,7 +574,7 @@ Definition funextfun { A B : UU } ( f g : A -> B ) : homot f g -> paths f g := w
 
 (** ** Section 8.3: Impredicativity of h-levels. *)
 
-Fixpoint isofhlevel ( n : nat ) ( A : UU ) := 
+Fixpoint isofhlevel ( n : nat ) ( A : Type ) := 
   match n with 
     | 0 => iscontr A
     | S n => forall a b : A, isofhlevel n ( paths a b )
@@ -584,7 +586,7 @@ Proof.
   apply funextsec. intros x. apply ( pr2 ( is x ) ).
 Defined.
 
-Lemma impred ( n : nat ) : forall B : UU, forall E : B -> UU, ( forall x : B, isofhlevel n ( E x ) ) -> isofhlevel n ( forall x : B, E x ).
+Lemma impred ( n : nat ) : forall B : UU, forall E : B -> Type, ( forall x : B, isofhlevel n ( E x ) ) -> isofhlevel n ( forall x : B, E x ).
 Proof.
   induction n. intros B E is. apply ( impredbase E is ).
   intros B E is. change ( forall f g : ( forall x : B, E x ), isofhlevel n ( paths f g ) ).
@@ -610,7 +612,7 @@ Proof.
   apply ( @pathintotalfiber _ ( fun v : paths ( pr1 x ) ( pr1 y ) => paths ( transportf E v ( pr2 x ) ) ( pr2 y ) ) ( pair (pathintotalfiberpr1 (pathintotalfiber a a'))
         (pathintotalfiberpr2 (pathintotalfiber a a'))) ( pair a a' ) ( pathintotalfiberpr1andpitf _ _ a a' ) ). simpl. 
   destruct x as [ x x' ]. destruct y as [ y y' ].  simpl in a. destruct a. simpl in a'.  destruct a'. apply idpath.
-  intros a. unfold funcomp, idfun. unfold pathintotalfibertototalspace. destruct a as [ a a' ]. simpl.
+  intros a. unfold funcomp, idfun. unfold pathintotalfibertototalspace. simpl.
   rewrite pathintotalfibercharacterization. apply idpath.
 Defined.
 
@@ -847,6 +849,8 @@ Proof.
    apply ( @pathintotalfiber _ _ ( pair ( idfun unit ) _ ) f i ). 
    apply isapropisweq.
 Defined.
+
+Unset Universe Checking.
 
 Theorem isofhlevelSnhn ( n : nat ) : isofhlevel ( S n ) ( total ( fun x : UU => isofhlevel n x ) ).
 Proof.
