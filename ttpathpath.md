@@ -1,4 +1,4 @@
-文献で示されている `iscontrunit` と `isofhlevelntoSn` を使うと `Lemma ttpathpath (p q : paths tt tt) : paths p q.` が示せます。
+文献についているコードで示されている `iscontrunit` と `isofhlevelntoSn` を使うと `Lemma ttpathpath (p q : paths tt tt) : paths p q.` が示せます。
 
 ```
 Set Asymmetric Patterns.
